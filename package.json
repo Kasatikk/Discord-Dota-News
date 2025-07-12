@@ -1,0 +1,21 @@
+{
+  "name": "dota",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@typegoose/typegoose": "^12.14.0",
+    "common-tags": "^1.8.2",
+    "discord-hybrid-sharding": "^2.2.6",
+    "discord.js": "^14.18.0",
+    "glob": "^11.0.1",
+    "mongoose": "^8.13.2",
+    "prettier": "^3.5.3",
+    "typegoose": "^5.9.1"
+  }
+}
