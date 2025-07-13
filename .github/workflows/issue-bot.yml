@@ -1,15 +1,14 @@
-name: 🤖 Smart Issue Responder
+name: Автоответ на issue
 
 on:
   issues:
     types: [opened, edited]
-  workflow_dispatch:  # Для ручного тестирования
+  workflow_dispatch:  # туда-сюда
 
 env:
-  BOT_NAME: "🤖 AI Assistant"
+  BOT_NAME: "--"
   DOCS_URL: "${{ github.server_url }}/${{ github.repository }}/wiki"
-  CODE_FORMAT: "```\n$CODE\n```"  # Шаблон для форматирования кода
-
+  CODE_FORMAT: "```\n$CODE\n```"  # заворачивание ответа
 jobs:
   process-issue:
     runs-on: ubuntu-latest
@@ -37,7 +36,7 @@ jobs:
             const isFeatureRequest = body.toLowerCase().includes('feature') || 
                                     /enhancement|improvement|улучшение/i.test(body);
 
-            // Генерация персонализированного ответа
+            // AI -анализ и авто ответ АПИ
             let response = `## 👋 Привет, @${user.login}!\n\n`;
             
             if (isBugReport) {
