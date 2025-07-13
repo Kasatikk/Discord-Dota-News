@@ -1,10 +1,10 @@
 # <img src="https://i.imgur.com/J4h8NOO.png" width="30" height="30"> Dota 2 News Bot
 
 <p align="center">
-  <img src="https://i.imgur.com/J4h8NOO.png" width="200" alt="Dota 2 News Logo">
+  <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" width="111" alt="DLogo">
 </p>
 
-<h3 align="center">✨ Настраиваемый Discord-бот для новостей Dota 2 ✨</h3>
+<h3 align="center">✨ Публичный Discord-бот, предназначенный для настраиваемого постинга новостей по Dota 2 ✨</h3>
 
 <div align="center">
   
