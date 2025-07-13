@@ -1,11 +1,4 @@
 # Discord-Dota-News
-
-<p align="center">
-  <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" width="311" alt="DLogo">
-</p>
-
-<h3 align="center">✨ Публичный Discord-бот, предназначенный для настраиваемого постинга новостей по Dota 2 ✨</h3>
-
 ## Основные функции
 
 ```diff
