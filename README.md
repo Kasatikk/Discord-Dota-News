@@ -55,24 +55,4 @@
 | `!dota setup`     | Настроить канал для уведомлений   | `!dota setup #news-channel`|
 | `!dota help`      | Показать справку по командам      | `!dota help`               |
 
-## 📊 Статистика проекта
 
-![GitHub stars](https://img.shields.io/github/stars/Kasatikk/Discord-Dota-News?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Kasatikk/Discord-Dota-News?style=social)
-![GitHub issues](https://img.shields.io/github/issues/Kasatikk/Discord-Dota-News)
-
-## 🤝 Как помочь проекту
-
-1. Сообщайте о багах через [Issues](https://github.com/Kasatikk/Discord-Dota-News/issues)
-2. Предлагайте новые фичи
-3. Ставьте ⭐ репозиторию
-4. Рассказывайте о боте друзьям!
-
-## 📜 Лицензия
-
-MIT License © 2023 Kasatikk
-
----
-
-> "From zero to hero with Dota News Bot!" 🏆  
-> Всегда в курсе последних событий мира Dota 2!
