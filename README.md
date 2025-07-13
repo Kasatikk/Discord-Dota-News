@@ -56,14 +56,3 @@ bun start
 | `!news`      | Последние новости        | `!news 3`           |
 | `!watch`     | Запустить стрим          | `!watch url`        |
 | `!setup`     | Настройка канала         | `!setup #general`   |
-
-<div align="center">
-
-[![Добавить бота](https://img.shields.io/badge/-ДОБАВИТЬ_БОТА-7289DA?style=for-the-badge&logo=discord)](https://)
-[![Документация](https://img.shields.io/badge/-ДОКУМЕНТАЦИЯ-white?style=for-the-badge)](https://)
-
-</div>
-
-<p align="center">
-  <sub>Created with ❤️ for Dota 2 community</sub>
-</p>
