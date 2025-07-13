@@ -2,9 +2,6 @@
 
 <p align="center">
   <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" height="120" alt="Dota News Logo">
-  <br>
-  <img src="https://img.shields.io/badge/Version-1.3-blueviolet" alt="Версия 1.3">
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="Лицензия MIT">
 </p>
 
 **Многофункциональный бот для Dota 2 с новостями, стримами и турнирной аналитикой**
