@@ -1,6 +1,6 @@
 # Discord Dota News v1.2
 
-<p align="center"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Dota_logo.svg" height="50"> <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" width="50" height="50"> </p>
+<p align="center"> <img src="https://91.143.50.85:5001/share.cgi?ssid=e3c6dd2f67f84c078f549e791d9bc72c&openfolder=normal&ep=ZGlub3gyODkx&_dc=1752390982504&fid=e3c6dd2f67f84c078f549e791d9bc72c&filename=Group%2010.png" height="50"></p>
 
 **Лучший Discord-бот для новостей Dota 2 с автоматическими обновлениями и красивым оформлением!**
 
