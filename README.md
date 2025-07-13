@@ -1,55 +1,77 @@
-```markdown
-# 🌟 Dota 2 News Bot
+# <img src="https://i.imgur.com/J4h8NOO.png" width="30" height="30"> Dota 2 News Bot
 
 <p align="center">
-  <img src="https://i.imgur.com/J4h8NOO.png" width="250" alt="Dota 2 News Logo">
+  <img src="https://i.imgur.com/J4h8NOO.png" width="200" alt="Dota 2 News Logo">
 </p>
 
-<h3 align="center">Публичный Discord-бот для настраиваемого постинга новостей Dota 2</h3>
+<h3 align="center">✨ Настраиваемый Discord-бот для новостей Dota 2 ✨</h3>
 
 <div align="center">
-
-[![News Badge](https://img.shields.io/badge/📰-Автоматические_новости-9cf?style=for-the-badge)](https://)
-[![Streams Badge](https://img.shields.io/badge/🎥-Twitch/YouTube_стримы-ff69b4?style=for-the-badge)](https://)
-[![Custom Badge](https://img.shields.io/badge/⚙️-Полная_настройка-orange?style=for-the-badge)](https://)
+  
+[![News](https://img.shields.io/badge/NEWS-Автоматические-blueviolet?style=flat-square&logo=bookstack)](https://)
+[![Streams](https://img.shields.io/badge/STREAMS-Twitch/YouTube-red?style=flat-square&logo=twitch)](https://)
+[![Custom](https://img.shields.io/badge/SETUP-Гибкая_настройка-orange?style=flat-square&logo=settings)](https://)
 
 </div>
 
-## ✨ Возможности
+## 🔥 Основные функции
 
 ```diff
-+ Автоматический парсинг новостей с официальных источников
-+ Полная кастомизация формата постов (эмбеды/текст)
-+ Интеллектуальная система фильтрации контента
-+ Встроенный плеер для трансляций (PIP-режим)
+# Новостной модуль
++ Автоматический сбор новостей с 10+ источников
++ Гибкие настройки формата (текст/эмбед/мини)
++ Фильтры по темам: патчи, турниры, моды
++ Поддержка мультиязычности
+
+# Стрим-модуль
++ PIP-плеер для Twitch/YouTube
++ Уведомления о live-трансляциях
++ Система рекомендаций стримов
 ```
 
-## 🚀 Установка
+## ⚡️ Быстрый старт
 
 ```bash
-# Установка зависимостей
+# Установка
 bun install
 
-# Запуск бота
+# Конфигурация
+cp config.example.json config.json
+
+# Запуск
 bun start
 ```
 
-// Пример конфигурации
+```json
+// config.json
 {
-  "news_format": "rich_embed", // "compact" | "full_text"
-  "update_frequency": 30,      // минут
-  "sources": ["valve", "esports"]
+  "news": {
+    "style": "rich_embed",
+    "interval": 30,
+    "language": "ru"
+  },
+  "streams": {
+    "quality": "720p",
+    "pip": true
+  }
 }
+```
 
+## 🎮 Команды
+
+| Команда       | Описание                  | Пример               |
+|--------------|--------------------------|----------------------|
+| `!news`      | Последние новости        | `!news 3`           |
+| `!watch`     | Запустить стрим          | `!watch url`        |
+| `!setup`     | Настройка канала         | `!setup #general`   |
 
 <div align="center">
 
-[![Button](https://img.shields.io/badge/Добавить_бота-7289DA?style=for-the-badge&logo=discord)](https://)
-[![Button](https://img.shields.io/badge/Документация-ffffff?style=for-the-badge)](https://)
+[![Добавить бота](https://img.shields.io/badge/-ДОБАВИТЬ_БОТА-7289DA?style=for-the-badge&logo=discord)](https://)
+[![Документация](https://img.shields.io/badge/-ДОКУМЕНТАЦИЯ-white?style=for-the-badge)](https://)
 
 </div>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=dota2-news-bot&label=Просмотров&color=blue&style=flat" alt="Просмотры">
+  <sub>Created with ❤️ for Dota 2 community</sub>
 </p>
-
