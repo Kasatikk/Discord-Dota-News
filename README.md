@@ -2,7 +2,7 @@
 
 # <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=28 /> <a href="https://github.com/Kasatikk">Kasatikk</a><a href="https://github.com/Kasatikk/Discord-Dota-News">/Discord-Dota-News</a> <img src="https://cdn-icons-png.flaticon.com/128/1356/1356479.png" height=28 />
 
-*"Гибкий и мощный"* бот для публикации новостей Dota 2 в <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=11 /> **Discord** с интеграцией стримов <img src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" height=11 /> **Twitch** и <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" height=11 /> **YouTube**  
+*"Гибкий и мощный"* бот для публикации новостей Dota 2 в <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=11 /> **Discord** с интеграцией стримов <img src="https://cdn-icons-png.flaticon.com/128/7331/7331665.png" height=11 /> **Twitch** и <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" height=11 /> **YouTube**  
 
 Гибкие настройки формата, автоматическая публикация обновлений и тесная интеграция с киберспортивными событиями.  
 </div>
@@ -22,9 +22,9 @@
    git clone https://github.com/Kasatikk/Discord-Dota-News
    ```  
 
-2. **Установите зависимости**  
+2. **Установите зависимости через Bun**  
    ```bash
-   pip install -r requirements.txt
+   bun install
    ```  
 
 3. **Настройте конфиг** (`config.yaml`)  
@@ -37,7 +37,7 @@
 
 4. **Запустите бота**  
    ```bash
-   python main.py
+   bun run index.ts
    ```  
 
 ## 📌 КЛЮЧЕВЫЕ ФУНКЦИИ  
@@ -62,9 +62,8 @@ format:
 ```  
 
 ## 🛠 ТЕХНОЛОГИИ  
-- **Python 3.10+**  
-- **Discord.py** (модуль для работы с Discord API)  
-- **BeautifulSoup4/Requests** (парсинг новостей)  
+- **Bun** (быстрая JavaScript-среда)  
+- **Discord.js** (модуль для работы с Discord API)  
 - **Twitch/YouTube API** (мониторинг стримов)  
 
 ## ❓ FAQ  
