@@ -1,113 +1,103 @@
-name: Автоответ на issue
+name: "Автоответы-2"
 
 on:
   issues:
-    types: [opened, edited]
-  workflow_dispatch:  # туда-сюда
+    types: [opened]
+  workflow_dispatch:  # тестик
+  issues: write
+  pull-requests: read
 
-env:
-  BOT_NAME: "--"
-  DOCS_URL: "${{ github.server_url }}/${{ github.repository }}/wiki"
-  CODE_FORMAT: "```\n$CODE\n```"  # заворачивание ответа
 jobs:
-  process-issue:
+  respond-to-issue:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: read
     steps:
-      - name: Analyze and respond
+      - name: Process new issue
         uses: actions/github-script@v7
-        id: respond
         with:
           script: |
-            const { issue, repository } = context.payload;
-            const { body, user, number } = issue;
-            
-            // Пропускаем свои же сообщения и пустые issues
-            if (user.login.includes('[bot]') || !body?.trim()) {
-              console.log('Skipping bot or empty issue');
-              return;
-            }
+            try {
+              // Обработка
+              if (!context.payload.issue) {
+                core.warning('No issue found in payload');
+                return;
+              }
 
-            // Анализ содержания issue
-            const isBugReport = body.toLowerCase().includes('bug') || 
-                              /error|issue|problem|ошибка|проблема/i.test(body);
-            const isFeatureRequest = body.toLowerCase().includes('feature') || 
-                                    /enhancement|improvement|улучшение/i.test(body);
+              // Изучение контекста отправка АПи
+              const { issue } = context.payload;
+              const { body, user, number, title } = issue;
+              const { owner, repo } = context.repo;
 
-            // AI -анализ и авто ответ АПИ
-            let response = `## 👋 Привет, @${user.login}!\n\n`;
-            
-            if (isBugReport) {
-              response += `### 🐞 Мы получили ваш баг-репорт\n`;
-              response += `Для быстрого решения проблемы, пожалуйста, уточните:\n\n`;
-              response += `1. **Точные шаги воспроизведения**\n`;
-              response += `2. **Ожидаемое vs фактическое поведение**\n`;
-              response += `3. **Версии используемых компонентов**\n`;
-              response += `4. **Логи/скриншоты** (используйте ${env.CODE_FORMAT.replace('$CODE', 'код')} для логов)\n\n`;
-              response += `🔍 *Мы уже начали анализ вашего отчета!*\n`;
-            } else if (isFeatureRequest) {
-              response += `### 💡 Спасибо за ваше предложение!\n`;
-              response += `Помогите нам лучше понять вашу идею:\n\n`;
-              response += `1. **Какую проблему это решит?**\n`;
-              response += `2. **Есть ли альтернативные решения?**\n`;
-              response += `3. **Пример использования**\n\n`;
-              response += `📊 *Мы оценим ваше предложение в течение 48 часов*\n`;
-            } else {
-              response += `### ❓ Мы получили ваш вопрос\n`;
-              response += `Для быстрого ответа уточните:\n\n`;
-              response += `1. **Что вы уже пробовали?**\n`;
-              response += `2. **Какие результаты ожидаете?**\n`;
-              response += `3. **Релевантные фрагменты кода/конфигов**\n\n`;
-              response += `📚 Возможно, ответ уже есть в [документации](${env.DOCS_URL})\n`;
-            }
+              // туда-сюда
+              if (user.login.includes('[bot]')) {
+                console.log('Skipping bot message');
+                return;
+              }
 
-            // Добавляем стандартные блоки
-            response += `\n<details>
-            <summary><b>📝 Шаблон для ответа</b></summary>
-            
-            ${env.CODE_FORMAT.replace('$CODE', 
-              isBugReport ? 
-              '**Шаги воспроизведения:**\n1. ...\n\n**Ожидаемый результат:**\n...\n\n**Фактический результат:**\n...' : 
-              '**Описание:**\n...\n\n**Обоснование:**\n...\n\n**Пример использования:**\n...'
-            )}
-            </details>`;
+              if (!body?.trim()) {
+                await github.rest.issues.createComment({
+                  issue_number: number,
+                  owner,
+                  repo,
+                  body: "👋 Пожалуйста, добавьте описание к вашему issue!"
+                });
+                return;
+              }
 
-            response += `\n\n🔔 *Это автоматическое сообщение. Мы ответим в ближайшее время!*`;
+              // 4. Определяем тип issue
+              const isBug = /error|bug|ошибка|проблема/i.test(body + title);
+              const isFeature = /feature|enhancement|улучшение/i.test(body + title);
 
-            // Создаем комментарий
-            await github.rest.issues.createComment({
-              issue_number: number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: response
-            });
+              // 5. Формируем персонализированный ответ
+              let response = `## 👋 Привет, @${user.login}!\n\n`;
+              
+              if (isBug) {
+                response += `### 🐞 Мы получили ваш отчет об ошибке\n`;
+                response += `Пожалуйста, уточните:\n\n`;
+                response += "- Точные шаги воспроизведения\n";
+                response += "- Ожидаемое и фактическое поведение\n";
+                response += "- Версии используемых компонентов\n";
+                response += "- Логи/скриншоты (используйте \\\`код\\\` для форматирования)\n\n";
+                response += "**Метка:** Добавлена `bug`\n";
+              } else if (isFeature) {
+                response += `### 💡 Спасибо за ваше предложение!\n`;
+                response += `Помогите нам лучше понять вашу идею:\n\n`;
+                response += "- Какую проблему это решит?\n";
+                response += "- Есть ли альтернативные решения?\n";
+                response += "- Пример использования\n\n";
+                response += "**Метка:** Добавлена `enhancement`\n";
+              } else {
+                response += `### ❓ Мы получили ваш вопрос\n`;
+                response += `Для быстрого ответа уточните:\n\n`;
+                response += "- Что вы уже пробовали?\n";
+                response += "- Какие результаты ожидаете?\n";
+                response += "- Релевантные фрагменты кода\n\n";
+                response += "**Метка:** Добавлена `question`\n";
+              }
 
-            // Добавляем соответствующие метки
-            const labels = [];
-            if (isBugReport) labels.push('bug', 'needs-triage');
-            else if (isFeatureRequest) labels.push('enhancement', 'under-review');
-            else labels.push('question', 'needs-info');
+              response += `\n> 🔔 Это автоматическое сообщение. Мы ответим в ближайшее время!`;
 
-            await github.rest.issues.addLabels({
-              issue_number: number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: labels
-            });
-
-            // Для feature requests создаем связанную дискуссию
-            if (isFeatureRequest) {
-              await github.rest.repos.createDiscussion({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                title: `Обсуждение FR: ${issue.title}`,
-                body: `Связано с #${number}\n\n${issue.body}`,
-                category: 'Ideas'
+              // 6. Отправляем комментарий
+              await github.rest.issues.createComment({
+                issue_number: number,
+                owner,
+                repo,
+                body: response
               });
-            }
 
-      - name: Log processing result
-        if: always()
-        run: echo "Issue #${{ github.event.issue.number }} processed by ${{ env.BOT_NAME }}"
+              // 7. Добавляем соответствующую метку
+              const labels = isBug ? ['bug'] : isFeature ? ['enhancement'] : ['question'];
+              
+              await github.rest.issues.addLabels({
+                issue_number: number,
+                owner,
+                repo,
+                labels: [...labels, 'triage']  // Всегда добавляем метку triage
+              });
+
+              console.log(`Successfully processed issue #${number}`);
+
+            } catch (error) {
+              // 8. Обработка ошибок
+              core.error(`Failed to process issue: ${error}`);
+              core.setFailed(error.message);
+            }
