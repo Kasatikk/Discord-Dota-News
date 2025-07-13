@@ -1,4 +1,4 @@
-# Discord Dota News v1.2
+# Discord Dota News v 1.2
 
 <p align="center"> <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" height="111"></p>
 
