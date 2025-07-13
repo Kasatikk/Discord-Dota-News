@@ -1,4 +1,4 @@
-# <img src="https://i.imgur.com/J4h8NOO.png" width="30" height="30"> Dota 2 News Bot
+# <img src="https://i.imgur.com/J4h8NOO.png" width="30" height="30"> Discord-Dota-News
 
 <p align="center">
   <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" width="311" alt="DLogo">
