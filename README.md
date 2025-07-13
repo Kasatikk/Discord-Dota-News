@@ -34,14 +34,13 @@ bun install
 bun start
 ```
 
-```jsonc
 // Пример конфигурации
 {
   "news_format": "rich_embed", // "compact" | "full_text"
   "update_frequency": 30,      // минут
   "sources": ["valve", "esports"]
 }
-```
+
 
 <div align="center">
 
@@ -53,4 +52,4 @@ bun start
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=dota2-news-bot&label=Просмотров&color=blue&style=flat" alt="Просмотры">
 </p>
-```
+
