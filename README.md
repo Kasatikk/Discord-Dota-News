@@ -1,5 +1,5 @@
-## Discord-Dota-News
-# Основные функции
+### Discord-Dota-News
+## Основные функции
 
 ```diff
 # Новостной модуль
