@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=28 /> <a href="https://github.com/nrdxn/">nrdxn</a><a href="https://github.com/nrdxn/Discord-Dota-News">/Discord-Dota-News</a> <img src="https://cdn-icons-png.flaticon.com/128/1356/1356479.png" height=28 />
+# <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=28 /> <a href="https://github.com/Kasatikk">Kasatikk</a><a href="https://github.com/Kasatikk/Discord-Dota-News">/Discord-Dota-News</a> <img src="https://cdn-icons-png.flaticon.com/128/1356/1356479.png" height=28 />
 
 *"Гибкий и мощный"* бот для публикации новостей Dota 2 в <img src="https://cdn-icons-png.flaticon.com/128/5968/5968756.png" height=11 /> **Discord** с интеграцией стримов <img src="https://cdn-icons-png.flaticon.com/128/3670/3670147.png" height=11 /> **Twitch** и <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" height=11 /> **YouTube**  
 
@@ -19,7 +19,7 @@
 
 1. **Клонируйте репозиторий**  
    ```bash
-   git clone https://github.com/nrdxn/Discord-Dota-News.git
+   git clone https://github.com/Kasatikk/Discord-Dota-News
    ```  
 
 2. **Установите зависимости**  
@@ -43,7 +43,8 @@
 ## 📌 КЛЮЧЕВЫЕ ФУНКЦИИ  
 
 ### 🎮 **Dota 2 Новости**  
-- Автоматический парсинг обновлений с официальных сайтов и Twitter  
+- Автоматический парсинг обновлений с официальных сайтов и Telegram/VK
+- Возможность добавления своих источников (/urllist)
 - Поддержка мультиязычных источников (EN/RU)  
 - Фильтрация по ключевым словам  
 
@@ -85,11 +86,11 @@ embed:
 ```  
 
 ## 🌟 ПОДДЕРЖКА ПРОЕКТА  
-Поставьте ⭐ на GitHub и предложите свои идеи в [Issues](https://github.com/nrdxn/Discord-Dota-News/issues)!  
+Поставьте ⭐ на GitHub и предложите свои идеи в [Issues](https://github.com/Kasatikk/Discord-Dota-News/issues)!  
 
-<a href="https://star-history.com/#nrdxn/Discord-Dota-News&Date">
+<a href="https://star-history.com/#Kastikk/Discord-Dota-News&Date">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=nrdxn/Discord-Dota-News&type=Date&theme=dark" />
-    <img alt="Star History" src="https://api.star-history.com/svg?repos=nrdxn/Discord-Dota-News&type=Date" />
+    <img alt="Star History" src="https://api.star-history.com/svg?repos=Kasatikk/Discord-Dota-News&type=Date" />
   </picture>
 </a>
