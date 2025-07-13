@@ -1,4 +1,4 @@
-### Discord-Dota-News
+# Discord-Dota-News
 ## Основные функции
 
 ```diff
