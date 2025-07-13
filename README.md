@@ -6,14 +6,6 @@
 
 <h3 align="center">✨ Публичный Discord-бот, предназначенный для настраиваемого постинга новостей по Dota 2 ✨</h3>
 
-<div align="center">
-  
-[![News](https://img.shields.io/badge/NEWS-Автоматические-blueviolet?style=flat-square&logo=bookstack)](https://)
-[![Streams](https://img.shields.io/badge/STREAMS-Twitch/YouTube-red?style=flat-square&logo=twitch)](https://)
-[![Custom](https://img.shields.io/badge/SETUP-Гибкая_настройка-orange?style=flat-square&logo=settings)](https://)
-
-</div>
-
 ## 🔥 Основные функции
 
 ```diff
