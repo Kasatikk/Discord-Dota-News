@@ -1,4 +1,4 @@
-# <img src="https://i.imgur.com/J4h8NOO.png" width="30" height="30"> Discord-Dota-News
+# Discord-Dota-News
 
 <p align="center">
   <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" width="311" alt="DLogo">
@@ -6,7 +6,7 @@
 
 <h3 align="center">✨ Публичный Discord-бот, предназначенный для настраиваемого постинга новостей по Dota 2 ✨</h3>
 
-## 🔥 Основные функции
+## Основные функции
 
 ```diff
 # Новостной модуль
