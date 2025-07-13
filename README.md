@@ -1,6 +1,6 @@
 # Discord Dota News v1.2
 
-<p align="center"> <img src="https://91.143.50.85:5001/share.cgi?ssid=e3c6dd2f67f84c078f549e791d9bc72c&openfolder=normal&ep=ZGlub3gyODkx&_dc=1752390982504&fid=e3c6dd2f67f84c078f549e791d9bc72c&filename=Group%2010.png" height="50"></p>
+<p align="center"> <img src="https://i.postimg.cc/QCzrwdmn/Group-10.png" height="50"></p>
 
 **Лучший Discord-бот для новостей Dota 2 с автоматическими обновлениями и красивым оформлением!**
 
